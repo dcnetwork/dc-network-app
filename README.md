@@ -10,4 +10,4 @@ cd <repo>
 cargo tauri dev
 ```
 
-## BUILT WIT `TAURI` AND `YEW`
+### Built With `TAURI` + `YEW`
