@@ -1,7 +1,13 @@
-# Tauri + Yew
+## DC NETWORK
 
-This template should help get you started developing with Tauri and Yew.
+### Download using `git clone`
+```
+git clone <repo>
+```
+### Build
+```
+cd <repo>
+cargo tauri dev
+```
 
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+## BUILT WIT `TAURI` AND `YEW`
