@@ -7,8 +7,10 @@ use yew::prelude::*;
 use gloo_timers::callback::Timeout;
 use web_sys::window;
 
-
+// ************* my libs *************
 use dc_network_app_ui::components::welcome::*;
+use dc_network_app_ui::theme::Theme;
+use dc_network_app_ui::components::side_navbar::*;
 
 #[wasm_bindgen]
 extern "C" {
@@ -98,26 +100,34 @@ extern "C" {
 //     }
 // }
 
-#[derive(Clone, PartialEq)]
-pub struct Theme {
-    foreground: String,
-    background: String,
-}
+
 
 #[function_component(App)]
 pub fn app() -> Html {
     let splash = use_state(|| true);
     let csplash = splash.clone(); // cloned splash
-    let timeout = Timeout::new(2000, move || {
+    
+    let timeout = Timeout::new(1000, move || {
         csplash.set(false);
     });    
+
     timeout.forget();
+
+    let ctx = use_state(|| Theme {
+        foreground: "#ffffff".to_owned(),
+        background: "#192023".to_owned(),
+    });
 
     html! {
         if *splash{
-            <Welcome/>
-        }else{
-            <p>{"skdkasjdljas"}</p>
+            <ContextProvider<Theme> context={(*ctx).clone()}>
+                <ThemedWelcome />
+            </ContextProvider<Theme>>
+        }
+        else{
+            <ContextProvider<Theme> context={(*ctx).clone()}>
+                <ThemedNavbar /> 
+            </ContextProvider<Theme>>   
         }
     }
 

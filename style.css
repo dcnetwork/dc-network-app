@@ -14,7 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+.fullcontent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
 .container {
   margin: 0;
   padding-top: 10vh;
@@ -49,6 +55,36 @@
     to{
         opacity: 1;
     }
+}
+.nav-container{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    background: url(https://thelinuxpoint.github.io/Hexagon.svg);
+    height: calc(100vh - 20px);
+    border-radius: 20px;
+    background-origin: content-box;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav-item-below{
+}
+.nav-item-top{
+}
+.nav-item{
+    width: 100%;
+
+}
+.nav-item:hover{
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+.nav-item img{
+    height: 30px;
+    width: 30px;
 }
 .logo {
   height: 6em;
