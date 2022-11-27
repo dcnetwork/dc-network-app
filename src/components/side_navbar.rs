@@ -38,7 +38,7 @@ impl Component for Navbar{
         let theme = &ctx.props().theme;
 
 		html!{
-			<main class="fullcontent" style={format!("background: {}; color: {};",theme.background,theme.foreground)}>
+			<div class="fullcontent" style={format!("background: {}; color: {};",theme.background,theme.foreground)}>
                 <div class="nav-container">
                     <div class="nav-item-top">
                         <div class="nav-item">
@@ -60,7 +60,7 @@ impl Component for Navbar{
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
 		}        
     }
 }

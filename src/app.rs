@@ -11,6 +11,8 @@ use web_sys::window;
 use dc_network_app_ui::components::welcome::*;
 use dc_network_app_ui::theme::Theme;
 use dc_network_app_ui::components::side_navbar::*;
+use dc_network_app_ui::components::context_option::ThemedContextOption;
+use dc_network_app_ui::components::context::ThemedContext;
 
 #[wasm_bindgen]
 extern "C" {
@@ -107,7 +109,7 @@ pub fn app() -> Html {
     let splash = use_state(|| true);
     let csplash = splash.clone(); // cloned splash
     
-    let timeout = Timeout::new(1000, move || {
+    let timeout = Timeout::new(3000, move || {
         csplash.set(false);
     });    
 
@@ -115,7 +117,7 @@ pub fn app() -> Html {
 
     let ctx = use_state(|| Theme {
         foreground: "#ffffff".to_owned(),
-        background: "#192023".to_owned(),
+        background: "#192035".to_owned(),
     });
 
     html! {
@@ -126,7 +128,10 @@ pub fn app() -> Html {
         }
         else{
             <ContextProvider<Theme> context={(*ctx).clone()}>
-                <ThemedNavbar /> 
+                <ThemedNavbar />
+                <ThemedContextOption />
+                <ThemedContext />
+
             </ContextProvider<Theme>>   
         }
     }
