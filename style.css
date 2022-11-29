@@ -113,10 +113,10 @@
 .left-context-item input{
     width: calc(25vw - 40px);
     padding: 10px;
-    border-radius: 10px;
-    border: 2px solid yellowgreen;
+    border-radius: 15px;
+    background-color: rgba(25, 30, 45, 1);
+    border: 2px solid royalblue;
 }
-
 .right-context{
     position: absolute;
     left: calc( 100px + 25vw );
@@ -125,12 +125,22 @@
     height: calc(100vh);
     display: flex;
     flex-direction: column;
-    align-items: center;    overflow-y: hidden;
-
+    align-items: center;
+    overflow-y: hidden;
 }
 .right-context-navbar{
+    display: flex;
+    align-items: center;
     height: 120px;
+    justify-content: center;
     width: calc(75vw - 100px);
+    font-weight: 600;
+    gap: 20px;
+    font-size: 20px;
+}
+.right-context-navbar img{
+    height: 40px;
+    width: 40px;
 }
 .right-context-main{
     position: absolute;
@@ -139,4 +149,60 @@
     width: calc(100% - 10px);
     height: calc(100vh - 120px);
     top: 120px;
+}
+.card-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.card{
+    margin-top: 15px;
+    padding: 10px;
+    color: black;
+    background: #e4e5ee;
+    box-shadow: 0px 0px 20px 1px f0f0ff;
+    height: 80px;
+    width: calc(25vw - 60px);
+    border-radius:20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.card-icon{
+
+}
+.card-info{
+    margin-left: 20px;
+}
+.card img{
+    height: 40px;
+    width: 40px;
+}
+.context-message-input{
+    position: fixed;
+    left: calc( 25vw + 100px + 40px);
+    bottom: 30px;
+    gap: 10px;
+}
+.context-message-input input{
+    width: calc(75vw - 250px);
+    padding: 10px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #121212;
+    color: white;
+}
+.context-message-input button{
+
+    height: 50px;
+    width: 50px;
+    background: royalblue;
+    border: none;
+    border-radius: 10px;
+}
+.context-message-icon{
+
 }

@@ -10,7 +10,6 @@ use js_sys::Function;
 
 use crate::theme::Theme;
 
-
 #[derive(PartialEq, Properties)]
 pub struct Props {
     theme: Theme,

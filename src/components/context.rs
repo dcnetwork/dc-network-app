@@ -24,9 +24,20 @@ pub fn cop(props: &Props) -> Html {
     html! {
         <div class="right-context" style={format!("background: {}; color: {};",theme.background,theme.foreground)}>
             <div class="right-context-navbar">
-
+                <div class="right-context-icon">
+                    <img src="public/account-light.svg"/>
+                </div>
+                <div class="right-context-name">
+                    <p>{"Vito Scaletta"}</p>
+                </div>
             </div>
             <div class="right-context-main">
+
+                <div class="context-message-input">
+                    <input placeholder={"Message"}/>
+                    <span>{" "}</span>
+                    <button>{"+"}</button>
+                </div>
             </div>
         </div>
     }

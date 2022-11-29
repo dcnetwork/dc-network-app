@@ -109,7 +109,7 @@ pub fn app() -> Html {
     let splash = use_state(|| true);
     let csplash = splash.clone(); // cloned splash
     
-    let timeout = Timeout::new(3000, move || {
+    let timeout = Timeout::new(1000, move || {
         csplash.set(false);
     });    
 
